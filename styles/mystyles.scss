@@ -1,0 +1,83 @@
+@charset "utf-8";
+//@import "../node_modules/bulma/bulma.sass";
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import "../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../node_modules/bulma/sass/utilities/functions.sass";
+.bg-img{
+        background-image: url("../public/images/base.png");
+        background-position: center center;
+				height:500px;
+        background-repeat:repeat;
+        background-attachment:scroll;
+        background-size:cover;
+				resize: both;
+        background-color: #999;
+			}
+
+
+// Set your brand colors
+$rippedfromdrac: #383a59;
+$background: #282a36;
+$currentLine: #44475a;
+$foreground: #f8f8f2;
+$comment: #6272a4;
+$cyan: #8be9fd;
+$purple: #bd93f9;
+$green: #50fa7b;
+$pink: #ff79c6;
+$orange: #ffb86c;
+$red:#ff5555;
+$yellow: #f1fa8c;
+
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$white: $foreground;
+$dark: $currentLine;
+
+$grey-darker: $background;
+$grey-light: $currentLine;
+$info: $comment;
+$primary: $purple;
+$success: $green;
+$link: $orange;
+$warning: $rippedfromdrac;
+$danger: $red;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $background;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active {
+        background-color: $primary !important;
+}
+
+a:hover {
+        color: $primary !important;
+}
+html body div#__next nav.navbar.has-background-grey-darker div#navbarBasicExample.navbar-menu.has-background-grey-darker div#navMenu.navbar-start div.navbar-item.has-dropdown.is-hoverable.has-background-grey-darke,div.navbar-item:nth-child(4):hover{
+        background-color: $comment !important;
+}
+
+strong {
+        color: $white !important;
+}
+
+// Import only what you need from Bulma
+//
+@import "../node_modules/bulma";
+//@import "../node_modules/bulma/sass/utilities/_all.sass";
+//@import "../node_modules/bulma/sass/base/_all.sass";
+//@import "../node_modules/bulma/sass/elements/button.sass";
+//@import "../node_modules/bulma/sass/elements/container.sass";
+//@import "../node_modules/bulma/sass/elements/title.sass";
+//@import "../node_modules/bulma/sass/form/_all.sass";
+//@import "../node_modules/bulma/sass/components/navbar.sass";
+//@import "../node_modules/bulma/sass/layout/hero.sass";
+//@import "../node_modules/bulma/sass/layout/section.sass";			
