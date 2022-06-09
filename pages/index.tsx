@@ -8,6 +8,8 @@ import Link from "next/link";
 import powerlake from "../public/images/powerlake.png";
 import lucidprofessor from "../public/images/ludicprofessor.png";
 import starterupp from "../public/images/starterupp.png";
+import Skills from "../components/Skills";
+import Tags from "../components/Tags";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -108,51 +110,14 @@ const Home: NextPage = ({ allPostsData }) => {
                 when electricity is at its cheapest.
               </div>
               <div className="field is-grouped is-grouped-multiline">
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Flask</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">React</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Python</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">JavaScript</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Webpack</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Gunicorn</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">WordPress</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">CSS3</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Bootstrap</span>
-                  </div>
-                </div>
+                <Tags tag="Flask" />
+                <Tags tag="React" />
+                <Tags tag="Python" />
+                <Tags tag="JavaScript" />
+                <Tags tag="Webpack" />
+                <Tags tag="Gunicorn" />
+                <Tags tag="CSS3" />
+                <Tags tag="Bootstrap" />
               </div>
             </div>
           </div>
@@ -174,56 +139,16 @@ const Home: NextPage = ({ allPostsData }) => {
                 in completion of my Diploma of Website Development.
               </div>
               <div className="field is-grouped is-grouped-multiline">
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Django</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Python</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Django Rest Framework</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">React</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">SCSS</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">TypeScript</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Parcel</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Bootstrap</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Workbox</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">Gunicorn</span>
-                  </div>
-                </div>
+                <Tags tag="Django" />
+                <Tags tag="Python" />
+                <Tags tag="Django Rest Framework" />
+                <Tags tag="React" />
+                <Tags tag="SCSS" />
+                <Tags tag="TypeScript" />
+                <Tags tag="Parcel" />
+                <Tags tag="Bootstrap" />
+                <Tags tag="Workbox" />
+                <Tags tag="Gunicorn" />
               </div>
             </div>
           </div>
@@ -254,106 +179,53 @@ const Home: NextPage = ({ allPostsData }) => {
                 .
               </div>
               <div className="field is-grouped is-grouped-multiline">
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">WordPress</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">CSS3</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">C</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">C#</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">D</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">D#</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">E</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">F</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">F#</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">G</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">G#</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">A</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">A#</span>
-                  </div>
-                </div>
-                <div className="control">
-                  <div className="tags">
-                    <span className="tag is-dark">B</span>
-                  </div>
-                </div>
+                <Tags tag="WordPress" />
+                <Tags tag="CSS3" />
+                <Tags tag="C" />
+                <Tags tag="C#" />
+                <Tags tag="D" />
+                <Tags tag="D#" />
+                <Tags tag="E" />
+                <Tags tag="F" />
+                <Tags tag="F#" />
+                <Tags tag="G" />
+                <Tags tag="G#" />
+                <Tags tag="A" />
+                <Tags tag="A#" />
+                <Tags tag="B" />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <div className="container is-fluid">
-        <div className="columns">
-          <div className="column has-background-dark has-text-white has-text-centered">
-            <div className="tile is-parent">
-              <div className="tile is-child notidication has-background-dark has-text-light has-text-centered">
-                Django
-              </div>
-            </div>
-          </div>{" "}
-          <div className="column has-background-dark has-text-white has-text-centered is-one-thirds">
-            <div className="tile is-parent">
-              <div className="tile is-child notidication has-background-dark has-text-light has-text-centered">
-                Django
-              </div>
-            </div>
-          </div>{" "}
-          <div className="column has-background-dark has-text-white has-text-centered">
-            <div className="tile is-parent">
-              <div className="tile is-child notidication has-background-dark has-text-light has-text-centered">
-                Django
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <section className="section is-small has-background-warning">
+        <h1 className="title has-text-danger is-size-3 has-text-centered">
+          Technologies I Use{" "}
+        </h1>
+        <br />
+        <Skills ref1="http://www.djangoproject.com/" data1="Django" ref2="https://www.python.org/" data2="Python"
+        ref3="https://flask.palletsprojects.com/" data3="Flask" />
+        <Skills ref1="https://www.typescriptlang.org/" data1="TypeScript" ref2="https://html.com/html5/" data2="HTML5"
+        ref3="https://www.w3.org/Style/CSS/" data3="CSS3" />
+        <Skills ref1="https://sass-lang.com/" data1="SCSS/SASS" ref2="https://www.javascript.com/"  data2="JavaScript" 
+        ref3 ="https://ejs.co/" data3="EJS" />
+        <Skills ref1="https://expressjs.com/" data1="Express.js" ref2="https://reactjs.org/" data2="React.js" 
+        ref3="https://nextjs.org/" data3="Next.js" />
+        <Skills ref1="https://getbootstrap.com/" ref2="https://bulma.io/" data1="Bootstrap" data2="Bulma.css" ref3="https://picocss.com/" data3="Pico.css" />
+        <Skills data1="Parcel" data2="Webpack"
+        data3="Workbox" ref1="https://parceljs.org/" ref2="https://webpack.js.org/" ref3="https://developer.chrome.com/docs/workbox/" />
+        <Skills data1="LaTeX" data2="Git" data3="Vim" ref1="https://www.latex-project.org/" ref2="https://git-scm.com/"
+        ref3="https://www.vim.org/" />
+        <Skills data1="Django Rest Framework" data2="Bash" data3="Linux" ref1="https://www.django-rest-framework.org/"
+        ref2="https://www.django-rest-framework.org/" ref3="https://www.linux.org/pages/download/" />
+      </section>
+      <section className="section is-small has-background-grey-darker">
+        <h1 className="title has-text-light is-size-3 has-text-centered">
+          Latest Blog Posts{" "}
+        </h1>
+        <br />
+
+      </section>
       <div className="level has-background-grey-darker" />
       <div className="container is-fluid">
         <div className="columns">
@@ -363,7 +235,7 @@ const Home: NextPage = ({ allPostsData }) => {
                 <>
                   <div className="tile is parent" key={id}>
                     <div
-                      className="tile is-child notification has-background-dark has-text-light"
+                      className="tile is-child notification has-background-warning has-text-light"
                       key={id}
                     >
                       <Link href={`/posts/${id}`}>
@@ -389,7 +261,7 @@ const Home: NextPage = ({ allPostsData }) => {
           </div>
           <div className="column is-one-thirds has-text-centered">
             <div className="tile is parent">
-              <article className="tile is-child notification has-background-dark">
+              <article className="tile is-child notification has-background-warning">
                 <Image
                   src={selfie}
                   height="160"
