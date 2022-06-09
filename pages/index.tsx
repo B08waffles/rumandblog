@@ -10,6 +10,7 @@ import lucidprofessor from "../public/images/ludicprofessor.png";
 import starterupp from "../public/images/starterupp.png";
 import Skills from "../components/Skills";
 import Tags from "../components/Tags";
+import WorkTogetherForm from "../components/WorkTogetherForm";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -52,8 +53,8 @@ const Home: NextPage = ({ allPostsData }) => {
           <div className="column is-half has-text-justified has-text-light">
             <p>
               {" "}
-              Hey, I'm Brandon! I first started tinkering with computers from
-              the glory days of Windows 95 and I've been addicted ever since!
+              Hey, I'm Brandon! I first started tinkering with computers in the
+              glory days of Windows 95 and I've been addicted ever since!
               Outside of my studies, I'm an avid reader, cyclist, musician and
               Linux enthusiast.
             </p>
@@ -203,82 +204,105 @@ const Home: NextPage = ({ allPostsData }) => {
           Technologies I Use{" "}
         </h1>
         <br />
-        <Skills ref1="http://www.djangoproject.com/" data1="Django" ref2="https://www.python.org/" data2="Python"
-        ref3="https://flask.palletsprojects.com/" data3="Flask" />
-        <Skills ref1="https://www.typescriptlang.org/" data1="TypeScript" ref2="https://html.com/html5/" data2="HTML5"
-        ref3="https://www.w3.org/Style/CSS/" data3="CSS3" />
-        <Skills ref1="https://sass-lang.com/" data1="SCSS/SASS" ref2="https://www.javascript.com/"  data2="JavaScript" 
-        ref3 ="https://ejs.co/" data3="EJS" />
-        <Skills ref1="https://expressjs.com/" data1="Express.js" ref2="https://reactjs.org/" data2="React.js" 
-        ref3="https://nextjs.org/" data3="Next.js" />
-        <Skills ref1="https://getbootstrap.com/" ref2="https://bulma.io/" data1="Bootstrap" data2="Bulma.css" ref3="https://picocss.com/" data3="Pico.css" />
-        <Skills data1="Parcel" data2="Webpack"
-        data3="Workbox" ref1="https://parceljs.org/" ref2="https://webpack.js.org/" ref3="https://developer.chrome.com/docs/workbox/" />
-        <Skills data1="LaTeX" data2="Git" data3="Vim" ref1="https://www.latex-project.org/" ref2="https://git-scm.com/"
-        ref3="https://www.vim.org/" />
-        <Skills data1="Django Rest Framework" data2="Bash" data3="Linux" ref1="https://www.django-rest-framework.org/"
-        ref2="https://www.django-rest-framework.org/" ref3="https://www.linux.org/pages/download/" />
+        <div className="colums is-8">
+          <Skills
+            ref1="http://www.djangoproject.com/"
+            data1="Django"
+            ref2="https://www.python.org/"
+            data2="Python"
+            ref3="https://flask.palletsprojects.com/"
+            data3="Flask"
+            ref4="https://www.w3.org/Style/CSS/"
+            data4="CSS3"
+          />
+          <Skills
+            ref1="https://www.typescriptlang.org/"
+            data1="TypeScript"
+            ref2="https://html.com/html5/"
+            data2="HTML5"
+            ref3="https://www.javascript.com/"
+            data3="JavaScript"
+            ref4="https://ejs.co/"
+            data4="EJS"
+          />
+          <Skills
+            ref1="https://sass-lang.com/"
+            data1="SCSS/SASS"
+            ref2="https://expressjs.com/"
+            data2="Express.js"
+            ref3="https://reactjs.org/"
+            data3="React.js"
+            ref4="https://nextjs.org/"
+            data4="Next.js"
+          />
+          <Skills
+            ref1="https://getbootstrap.com/"
+            ref2="https://bulma.io/"
+            data1="Bootstrap"
+            data2="Bulma.css"
+            ref3="https://picocss.com/"
+            data3="Pico.css"
+            data4="Parcel"
+            ref4="https://parceljs.org/"
+          />
+          <Skills
+            data1="Webpack"
+            data2="Workbox"
+            ref1="https://webpack.js.org/"
+            ref2="https://developer.chrome.com/docs/workbox/"
+            ref3="https://www.latex-project.org/"
+            ref4="https://git-scm.com/"
+            data3="LaTeX"
+            data4="Git"
+          />
+          <Skills
+            data1="Vim"
+            ref1="https://www.vim.org/"
+            data2="Django Rest Framework"
+            data3="Bash"
+            data4="Linux"
+            ref2="https://www.django-rest-framework.org/"
+            ref3="https://www.gnu.org/software/bash/"
+            ref4="https://www.linux.org/pages/download/"
+          />
+        </div>
       </section>
       <section className="section is-small has-background-grey-darker">
         <h1 className="title has-text-light is-size-3 has-text-centered">
-          Latest Blog Posts{" "}
+          Lets Work Together!{" "}
         </h1>
-        <br />
 
-      </section>
-      <div className="level has-background-grey-darker" />
-      <div className="container is-fluid">
-        <div className="columns">
-          <div className="column is-two-thirds has-text-justified">
-            <>
-              {allPostsData.map(({ id, date, title }) => (
-                <>
-                  <div className="tile is parent" key={id}>
-                    <div
-                      className="tile is-child notification has-background-warning has-text-light"
-                      key={id}
-                    >
-                      <Link href={`/posts/${id}`}>
-                        <a
-                          className="subtitle is-size-4 has-text-light has-text-weight-semibold"
-                          key={id}
-                        >
-                          {title}
-                        </a>
-                      </Link>
-                      <p className="subtitle" key={id}>
-                        {id}
-                      </p>
-                      <p className="content has-text-primary" key={id}>
-                        {date}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="level" key={id}></div>
-                </>
-              ))}
-            </>
-          </div>
-          <div className="column is-one-thirds has-text-centered">
-            <div className="tile is parent">
-              <article className="tile is-child notification has-background-warning">
-                <Image
-                  src={selfie}
-                  height="160"
-                  width="160"
-                  alt="selfie photo"
-                />
-                <h2 className="subtitle has-text-light">Hello traveller</h2>
-                <p className="content has-text-light">
-                  You have entered my domain. Contained herein are tales of
-                  technology, projects both past and present, personal
-                  experiences, my Portfolio, music and more.
-                </p>
-              </article>
+        <div className="level has-background-grey-darker" />
+        <div className="container is-fluid">
+          <div className="columns">
+            <div className="column is-two-thirds has-text-justified">
+              <>
+                <WorkTogetherForm />
+              </>
+            </div>
+            <div className="column is-one-thirds has-text-centered">
+              <div className="tile is parent">
+                <article className="tile is-child notification has-background-grey-darker">
+                  <Image
+                    src={selfie}
+                    height="160"
+                    width="160"
+                    alt="selfie photo"
+                  />
+                  <h2 className="subtitle has-text-light">Howdy!</h2>
+                  <p className="content has-text-light">
+                    I am always considering my options moving forward so if you
+                    have a possible arrangement to propose, or if you'd just
+                    like to say hi then please feel free to use the provided
+                    form otherwise you can reach me at b08waffles@protonmail.com
+                    with your own email client of choice.
+                  </p>
+                </article>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

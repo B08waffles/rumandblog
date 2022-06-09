@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Link from "next/link";
 import { getSortedPostsData } from "../lib/posts";
 
 export async function getStaticProps() {
@@ -13,28 +14,41 @@ export async function getStaticProps() {
 const BlogPage: NextPage = ({ allPostsData }) => {
   return (
     <>
-      {allPostsData.map(({ id, title, date }) => (
-        <>
-          <div className="tile is-parent" key={id}>
-            <div className="tile is-child notitification is-warning" key={id}>
-              <div className="content" key={id}>
-                <p className="title" key={id}>
-                  {title}
-                </p>
-                <p className="subtitle" key={id}>
-                  {id}
-                </p>
-                <p className="subtitle" key={id}>
-                  {date}
-                </p>
-                <div className="content" key={id}></div>
-              </div>
-            </div>
+      <div className="">
+        <div className="columns has-text-white">
+          <br />
+          <div className="column"></div>
+          <div className="column is-half">
+            {allPostsData.map(({ id, title, date }) => (
+              <>
+                <div className="tile is parent" key={id}>
+                  <div
+                    className="tile is-child notification has-background-warning has-text-light"
+                    key={id}
+                  >
+                    <Link href={`/posts/${id}`}>
+                      <a
+                        className="subtitle is-size-4 has-text-light has-text-weight-semibold"
+                        key={id}
+                      >
+                        {title}
+                      </a>
+                    </Link>
+                    <p className="subtitle" key={id}>
+                      {id}
+                    </p>
+                    <p className="content has-text-primary" key={id}>
+                      {date}
+                    </p>
+                  </div>
+                </div>
+                <div className="level" key={id}></div>
+              </>
+            ))}
           </div>
-
-          <div className="level" key={id}></div>
-        </>
-      ))}
+          <div className="column"></div>
+        </div>
+      </div>
     </>
   );
 };

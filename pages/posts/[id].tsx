@@ -31,7 +31,7 @@ export default function Post({ postData }) {
         <section className="section is-medium has-text-white">
           <div className="columns">
             <div className="column"></div>
-            <div className="column is-four-fifths">
+            <div className="column is-three-fifths">
               <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </div>
             <div className="column"></div>
