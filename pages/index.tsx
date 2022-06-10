@@ -4,10 +4,6 @@ import Image from "next/image";
 import selfie from "../public/images/selfie.png";
 import Typewriter from "typewriter-effect";
 import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import powerlake from "../public/images/powerlake.png";
-import lucidprofessor from "../public/images/ludicprofessor.png";
-import starterupp from "../public/images/starterupp.png";
 import Skills from "../components/Skills";
 import Tags from "../components/Tags";
 import WorkTogetherForm from "../components/WorkTogetherForm";
@@ -28,7 +24,10 @@ const Home: NextPage = ({ allPostsData }) => {
         <title>Home | B08waffles</title>
       </Head>
       <section className="hero is-success is-halfheight">
-        <div className="hero-body bg-img">
+        <div
+          className="hero-body bg-img"
+          style={{ boxShadow: "10px 10px 5px #23252f" }}
+        >
           <div className="">
             <p className="title has-text-light is-size-2">Hi, I'm Brandon.</p>
             <Typewriter
@@ -40,10 +39,15 @@ const Home: NextPage = ({ allPostsData }) => {
                 cursorClassName: "has-text-light is-size-3",
               }}
             />
+            <br />
+            <p className="subtitle text-has-white"></p>
           </div>
         </div>
       </section>
-      <section className="section has-background-warning">
+      <section
+        className="section has-background-warning"
+        style={{ boxShadow: "10px 10px 5px #23252f" }}
+      >
         <h1 className="title has-text-primary is-size-3 has-text-centered">
           The Essentials{" "}
         </h1>
@@ -76,12 +80,18 @@ const Home: NextPage = ({ allPostsData }) => {
           <div className="column"></div>
         </div>
       </section>
-      <section className="section is-small">
+      <section
+        className="section has-background-grey-darker"
+        style={{ boxShadow: "10px 10px 5px #23252f" }}
+      >
         <h1 className="title has-text-success is-size-3 has-text-centered">
           Projects
         </h1>
         <br />
-        <div className="card has-background-warning has-text-light">
+        <div
+          className="card has-background-warning has-text-light"
+          style={{ boxShadow: "10px 10px 5px #23252f" }}
+        >
           {/* <div className="card-content">
             <div className="media">
               <div className="media-left">
@@ -98,7 +108,7 @@ const Home: NextPage = ({ allPostsData }) => {
           </div>*/}
           <div className="card-content">
             <div className="media-content">
-              <p className="title is-4 has-text-white">Powerlake</p>
+              <p className="title is-3 has-text-white">Powerlake</p>
               <p className="subtitle is-6">
                 <a href="https://powerlake.com">https://powerlake.com</a>{" "}
               </p>
@@ -124,10 +134,13 @@ const Home: NextPage = ({ allPostsData }) => {
           </div>
         </div>
         <br />
-        <div className="card has-background-warning has-text-light">
+        <div
+          className="card has-background-warning has-text-light"
+          style={{ boxShadow: "10px 10px 5px #23252f" }}
+        >
           <div className="card-content">
             <div className="media-content">
-              <p className="title is-4 has-text-white">STARTER UPP</p>
+              <p className="title is-3 has-text-white">STARTER UPP</p>
               <p className="subtitle is-6">
                 <a href="https://starterupp.com">https://starterupp.com</a>{" "}
               </p>
@@ -155,10 +168,13 @@ const Home: NextPage = ({ allPostsData }) => {
           </div>
         </div>
         <br />
-        <div className="card has-background-warning has-text-light">
+        <div
+          className="card has-background-warning has-text-light"
+          style={{ boxShadow: "10px 10px 5px #23252f" }}
+        >
           <div className="card-content">
             <div className="media-content">
-              <p className="title is-4 has-text-white">Lucid Professor</p>
+              <p className="title is-3 has-text-white">Lucid Professor</p>
               <p className="subtitle is-6">
                 <a href="https://lucidprofessor.com">
                   https://lucidprofessor.com
@@ -199,7 +215,10 @@ const Home: NextPage = ({ allPostsData }) => {
           </div>
         </div>
       </section>
-      <section className="section is-small has-background-warning">
+      <section
+        className="section is-small has-background-warning"
+        style={{ boxShadow: "10px 10px 5px #23252f" }}
+      >
         <h1 className="title has-text-danger is-size-3 has-text-centered">
           Technologies I Use{" "}
         </h1>
@@ -227,7 +246,7 @@ const Home: NextPage = ({ allPostsData }) => {
           />
           <Skills
             ref1="https://sass-lang.com/"
-            data1="SCSS/SASS"
+            data1="SCSS & SASS"
             ref2="https://expressjs.com/"
             data2="Express.js"
             ref3="https://reactjs.org/"
@@ -242,7 +261,7 @@ const Home: NextPage = ({ allPostsData }) => {
             data2="Bulma.css"
             ref3="https://picocss.com/"
             data3="Pico.css"
-            data4="Parcel"
+            data4="Parcel.js"
             ref4="https://parceljs.org/"
           />
           <Skills
@@ -256,18 +275,21 @@ const Home: NextPage = ({ allPostsData }) => {
             data4="Git"
           />
           <Skills
-            data1="Vim"
+            data1="Vim/NeoVim & VimScript"
             ref1="https://www.vim.org/"
             data2="Django Rest Framework"
-            data3="Bash"
-            data4="Linux"
+            data3="Bash & Zsh"
+            data4="Arch & Debian Linux"
             ref2="https://www.django-rest-framework.org/"
             ref3="https://www.gnu.org/software/bash/"
             ref4="https://www.linux.org/pages/download/"
           />
         </div>
       </section>
-      <section className="section is-small has-background-grey-darker">
+      <section
+        className="section is-small has-background-grey-darker"
+        id="hireme"
+      >
         <h1 className="title has-text-light is-size-3 has-text-centered">
           Lets Work Together!{" "}
         </h1>
@@ -291,11 +313,11 @@ const Home: NextPage = ({ allPostsData }) => {
                   />
                   <h2 className="subtitle has-text-light">Howdy!</h2>
                   <p className="content has-text-light">
-                    I am always considering my options moving forward so if you
-                    have a possible arrangement to propose, or if you'd just
-                    like to say hi then please feel free to use the provided
-                    form otherwise you can reach me at b08waffles@protonmail.com
-                    with your own email client of choice.
+                    I am always open to new ideas, feedback and propositions so
+                    if you have something that you'd like to share then please
+                    use the contact form provided. If you would prefer to use
+                    your own email client, you can contact me at
+                    b08waffles@protonmail.com.
                   </p>
                 </article>
               </div>

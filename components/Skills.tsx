@@ -11,30 +11,50 @@ export default function Skills({
   return (
     <div className="tile is-ancestor">
       <div className="tile is-parent is-vertical">
-        <div className="tile is-child box has-background-info">
+        <div
+          className="tile is-child box has-background-info"
+          style={{ boxShadow: "10px 10px 5px #23252f" }}
+        >
           <p className="subtitle has-text-white has-text-centered has-text-weight-semibold">
-            <a href={ref1}>{data1}</a>
+            <a className="has-text-white" href={ref1}>
+              {data1}
+            </a>
           </p>
         </div>
       </div>
       <div className="tile is-parent is-vertical">
-        <div className="tile is-child box has-background-info">
+        <div
+          className="tile is-child box has-background-info"
+          style={{ boxShadow: "10px 10px 5px #23252f" }}
+        >
           <p className="subtitle has-text-white has-text-centered has-text-weight-semibold">
-            <a href={ref2}>{data2}</a>
+            <a className="has-text-white" href={ref2}>
+              {data2}
+            </a>
           </p>
         </div>
       </div>
       <div className="tile is-parent is-vertical">
-        <div className="tile is-child box has-background-info">
+        <div
+          className="tile is-child box has-background-info"
+          style={{ boxShadow: "10px 10px 5px #23252f" }}
+        >
           <p className="subtitle has-text-white has-text-centered has-text-weight-semibold">
-            <a href={ref3}>{data3}</a>
+            <a className="has-text-white" href={ref3}>
+              {data3}
+            </a>
           </p>
         </div>
       </div>
       <div className="tile is-parent is-vertical">
-        <div className="tile is-child box has-background-info">
+        <div
+          className="tile is-child box has-background-info"
+          style={{ boxShadow: "10px 10px 5px #23252f" }}
+        >
           <p className="subtitle has-text-white has-text-centered has-text-weight-semibold">
-            <a href={ref4}>{data4}</a>
+            <a className="has-text-white" href={ref4}>
+              {data4}
+            </a>
           </p>
         </div>
       </div>

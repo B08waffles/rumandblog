@@ -1,3 +1,5 @@
+import { faBlog, faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 export default function Header() {
@@ -12,6 +14,7 @@ export default function Header() {
       className="navbar has-background-warning"
       role="navigationn"
       aria-label="main navigation"
+      style={{ boxShadow: "10px 10px 5px #23252f" }}
     >
       <div className="navbar-brand">
         <div className="navbar-item">
@@ -43,50 +46,20 @@ export default function Header() {
       >
         <div className="navbar-start" id="navMenu">
           <Link href="/">
-            <a className="navbar-item has-text-light">Home</a>
+            <a className="navbar-item has-text-light">
+              {" "}
+              <FontAwesomeIcon icon={faHome} />
+              Home
+            </a>
           </Link>
           <Link href="/blog">
-            <a className="navbar-item has-text-light">Blog</a>
+            <a className="navbar-item has-text-light">
+              <FontAwesomeIcon icon={faBlog} /> Blog
+            </a>
           </Link>
-          <Link href="/13">
-            <a className="navbar-item has-text-light">Portfolio</a>
-          </Link>
-          <div className="navbar-item has-dropdown is-hoverable has-background-grey-darker">
-            <Link href="/3">
-              <a className="navbar-link has-text-light">More</a>
-            </Link>
-            <div className="navbar-dropdown has-background-grey-darker">
-              <Link href="/4">
-                <a className="navbar-item has-text-light">Projects</a>
-              </Link>
-              <a className="navbar-item has-text-light">About</a>
-              <Link href="/5">
-                <a className="navbar-item has-text-light">Contact</a>
-              </Link>
-              <hr className="navbar-divider" />
-              <Link href="/6">
-                <a className="navbar-item has-text-light">Report an issue</a>
-              </Link>
-            </div>
-          </div>
         </div>
 
-        <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="buttons">
-              <Link href="/7">
-                <a className="button has-background-success has-text-dark">
-                  Hire me
-                </a>
-              </Link>
-              <Link href="/8">
-                <a className="button has-background-primary has-text-light">
-                  Log in
-                </a>
-              </Link>
-            </div>
-          </div>
-        </div>
+        <div className="navbar-end"></div>
       </div>
     </nav>
   );

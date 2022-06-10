@@ -1,6 +1,6 @@
 @charset "utf-8";
 //@import "../node_modules/bulma/bulma.sass";
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+//@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 @import "../node_modules/bulma/sass/utilities/initial-variables.sass";
 @import "../node_modules/bulma/sass/utilities/functions.sass";
 .bg-img{
@@ -54,19 +54,80 @@ $body-background-color: $background;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
-a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active {
-        background-color: $primary !important;
+a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover,
+a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within,
+.navbar-link:hover, .navbar-link.is-active { background-color: $primary
+        !important;
 }
 
 a:hover {
         color: $primary !important;
 }
-html body div#__next nav.navbar.has-background-grey-darker div#navbarBasicExample.navbar-menu.has-background-grey-darker div#navMenu.navbar-start div.navbar-item.has-dropdown.is-hoverable.has-background-grey-darke,div.navbar-item:nth-child(4):hover{
+html body div#__next nav.navbar.has-background-grey-darker
+div#navbarBasicExample.navbar-menu.has-background-grey-darker
+div#navMenu.navbar-start
+div.navbar-item.has-dropdown.is-hoverable.has-background-grey-darke,div.navbar-item:nth-child(4):hover{
         background-color: $comment !important;
 }
 
 strong {
         color: $white !important;
+}
+
+pre, code {
+color: $white;
+}
+
+.token.number {
+        height:auto !important;
+        min-width:auto !important;
+        display: contents !important;
+        font-size:inherit !important;
+}
+
+.markdown > h2:nth-child(2) {display: none;
+}
+
+.markdown{
+        kerning: auto;
+        font-kerning: auto;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        p, ul, li{
+                font-size: large;
+        }
+     li {
+             padding:6px;
+             margin-left:10px;
+     }
+
+        h1 {
+                font-size: xx-large;
+                color: $green;
+                text-align: center;
+                font-weight: bold;
+                padding: 15px;
+        }
+        h2 {
+                font-size: x-large;
+                color: $primary;
+                text-align: center;
+                font-weight: bold;
+                padding: 10px
+        }
+
+        h3 {
+                font-size: large;
+                color: $pink;
+                text-align: center;
+                font-weight: bold;
+                padding:8px
+        }
+        pre, code {
+                font-size:large
+        }
+        img {
+                padding: 20px;
+        }
 }
 
 // Import only what you need from Bulma
