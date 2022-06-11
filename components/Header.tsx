@@ -1,4 +1,4 @@
-import { faBlog, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faBlog, faEnvelope, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
@@ -19,7 +19,7 @@ export default function Header() {
       <div className="navbar-brand">
         <div className="navbar-item">
           <Link href="/">
-            <a className="title has-text-white is-size-4" id="logo">
+            <a className="title has-text-white is-size-3" id="logo">
               B08waffles
             </a>
           </Link>
@@ -46,15 +46,20 @@ export default function Header() {
       >
         <div className="navbar-start" id="navMenu">
           <Link href="/">
-            <a className="navbar-item has-text-light">
+            <a className="navbar-item has-text-light is-size-4">
               {" "}
               <FontAwesomeIcon icon={faHome} />
               Home
             </a>
           </Link>
           <Link href="/blog">
-            <a className="navbar-item has-text-light">
+            <a className="navbar-item has-text-light is-size-4">
               <FontAwesomeIcon icon={faBlog} /> Blog
+            </a>
+          </Link>{" "}
+          <Link href="/contact">
+            <a className="navbar-item has-text-light is-size-4">
+              <FontAwesomeIcon icon={faEnvelope} /> Contact
             </a>
           </Link>
         </div>

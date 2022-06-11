@@ -7,6 +7,22 @@ import { getSortedPostsData } from "../lib/posts";
 import Skills from "../components/Skills";
 import Tags from "../components/Tags";
 import WorkTogetherForm from "../components/WorkTogetherForm";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faB,
+  faEnvelope,
+  faMailBulk,
+  faMailForward,
+  faMailReply,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faInstagram,
+  faLinkedinIn,
+  faMastodon,
+  faSoundcloud,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -23,38 +39,69 @@ const Home: NextPage = ({ allPostsData }) => {
       <Head>
         <title>Home | B08waffles</title>
       </Head>
-      <section className="hero is-success is-halfheight">
-        <div
-          className="hero-body bg-img"
-          style={{ boxShadow: "10px 10px 5px #23252f" }}
-        >
+      <section className="hero is-success is-fullheight-with-navbar has-background-grey-darker bg-img">
+        {" "}
+        <div className="hero-body ">
           <div className="">
-            <p className="title has-text-light is-size-2">Hi, I'm Brandon.</p>
+            <p className="title has-text-light is-size-1-desktop is-size-2-tablet is-size-3-mobile">
+              Hi, I'm Brandon.
+            </p>
             <Typewriter
               options={{
                 strings: ["Web Developer", "Musician", "Blogger"],
                 autoStart: true,
                 loop: true,
-                wrapperClassName: "has-text-light is-size-3",
-                cursorClassName: "has-text-light is-size-3",
+                wrapperClassName:
+                  "has-text-light is-size-2-desktop is-size-3-tablet is-size-4-mobile",
+                cursorClassName:
+                  "has-text-light is-size-2-desktop is-size-3-tablet is-size-4-mobile",
               }}
             />
-            <br />
-            <p className="subtitle text-has-white"></p>
           </div>
+        </div>{" "}
+        <div className="hero-foot is-size-1-desktop has-text-white">
+          {"   "}{" "}
+          <a href="https://github/b08waffles">
+            {"   "}
+            <FontAwesomeIcon icon={faGithub} />{" "}
+          </a>
+          <a href="https://starterupp.com">
+            {" "}
+            <FontAwesomeIcon icon={faLinkedinIn} />{" "}
+          </a>{" "}
+          <a href="mailto:b08waffles@protonmail.com">
+            {" "}
+            <FontAwesomeIcon icon={faEnvelope} />{" "}
+          </a>
+          <a href="https://starterupp.com">
+            {" "}
+            <FontAwesomeIcon icon={faInstagram} />{" "}
+          </a>
+          <a href="https://starterupp.com">
+            {" "}
+            <FontAwesomeIcon icon={faSoundcloud} />{" "}
+          </a>{" "}
+          <a href="https://starterupp.com">
+            {" "}
+            <FontAwesomeIcon icon={faMastodon} />{" "}
+          </a>
+          <a href="mailto:b08waffles@protonmail.com">
+            {" "}
+            <FontAwesomeIcon icon={faTwitter} />{" "}
+          </a>
         </div>
       </section>
       <section
         className="section has-background-warning"
         style={{ boxShadow: "10px 10px 5px #23252f" }}
       >
-        <h1 className="title has-text-primary is-size-3 has-text-centered">
-          The Essentials{" "}
+        <h1 className="title has-text-primary is-size-2-desktop is-size-3-tablet is-size-4-mobile has-text-centered">
+          The Essentials
         </h1>
         <br />
         <div className="columns">
           <div className="column"></div>
-          <div className="column is-half has-text-justified has-text-light">
+          <div className="column is-half has-text-justified has-text-light is-size-5-desktop is-size-6-tablet is-size-7-touch">
             <p>
               {" "}
               Hey, I'm Brandon! I first started tinkering with computers in the
@@ -84,7 +131,7 @@ const Home: NextPage = ({ allPostsData }) => {
         className="section has-background-grey-darker"
         style={{ boxShadow: "10px 10px 5px #23252f" }}
       >
-        <h1 className="title has-text-success is-size-3 has-text-centered">
+        <h1 className="title has-text-success is-size-2-desktop is-size-3-tablet has-text-centered">
           Projects
         </h1>
         <br />
@@ -108,11 +155,13 @@ const Home: NextPage = ({ allPostsData }) => {
           </div>*/}
           <div className="card-content">
             <div className="media-content">
-              <p className="title is-3 has-text-white">Powerlake</p>
-              <p className="subtitle is-6">
+              <p className="title is-size-3-desktop is-size-4-tablet is-size-5-touch has-text-white">
+                Powerlake
+              </p>
+              <p className="subtitle is-size-5-desktop is-size-6-tablet is-size-7-touch">
                 <a href="https://powerlake.com">https://powerlake.com</a>{" "}
               </p>
-              <div className="content">
+              <div className="content is-size-5-desktop is-size-6-tablet is-size-7-touch">
                 Powerlake is an energy saving tool that allows users to automate
                 their electrical appliances' operation times, according to
                 current and predicted electricity prices, and renewables
@@ -140,11 +189,13 @@ const Home: NextPage = ({ allPostsData }) => {
         >
           <div className="card-content">
             <div className="media-content">
-              <p className="title is-3 has-text-white">STARTER UPP</p>
-              <p className="subtitle is-6">
+              <p className="title is-size-3-desktop is-size-4-tablet is-size-5-mobile has-text-white">
+                STARTER UPP
+              </p>
+              <p className="subtitle is-size-5-desktop is-size-6-tablet is-size-7-touch">
                 <a href="https://starterupp.com">https://starterupp.com</a>{" "}
               </p>
-              <div className="content">
+              <div className="content is-size-5-desktop is-size-6-tablet is-size-7-touch">
                 STARTER UPP is a capitalisation system. It allows users to
                 create companies, invite employees to join and create
                 transactions with either "Money invested" or "Hours worked" in
@@ -175,12 +226,12 @@ const Home: NextPage = ({ allPostsData }) => {
           <div className="card-content">
             <div className="media-content">
               <p className="title is-3 has-text-white">Lucid Professor</p>
-              <p className="subtitle is-6">
+              <p className="subtitle is-size-5-desktop is-size-6-tablet is-size-7-touch">
                 <a href="https://lucidprofessor.com">
                   https://lucidprofessor.com
                 </a>{" "}
               </p>
-              <div className="content">
+              <div className="content is-size-5-desktop is-size-6-tablet is-size-7-touch">
                 Lucid Professor is a brisbane based Psychedelic Rock & Blues
                 band. In addition to being a founding member of the band, I made
                 the band's website as well. We are always keen for more gigs.
@@ -219,7 +270,7 @@ const Home: NextPage = ({ allPostsData }) => {
         className="section is-small has-background-warning"
         style={{ boxShadow: "10px 10px 5px #23252f" }}
       >
-        <h1 className="title has-text-danger is-size-3 has-text-centered">
+        <h1 className="title has-text-danger is-size-2-desktop is-size-3-tablet is-size-4-touch has-text-centered">
           Technologies I Use{" "}
         </h1>
         <br />
@@ -290,7 +341,7 @@ const Home: NextPage = ({ allPostsData }) => {
         className="section is-small has-background-grey-darker"
         id="hireme"
       >
-        <h1 className="title has-text-light is-size-3 has-text-centered">
+        <h1 className="title has-text-light is-size-2-desktop is-size-3-tablet is-size-4-touch has-text-centered">
           Lets Work Together!{" "}
         </h1>
 
@@ -311,8 +362,10 @@ const Home: NextPage = ({ allPostsData }) => {
                     width="160"
                     alt="selfie photo"
                   />
-                  <h2 className="subtitle has-text-light">Howdy!</h2>
-                  <p className="content has-text-light">
+                  <h2 className="subtitle has-text-light is-size-5-desktop is-size-6-touch">
+                    Howdy!
+                  </h2>
+                  <p className="content has-text-light is-size-5-desktop is-size-6-touch">
                     I am always open to new ideas, feedback and propositions so
                     if you have something that you'd like to share then please
                     use the contact form provided. If you would prefer to use

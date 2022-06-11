@@ -4,6 +4,9 @@ import Head from "next/head";
 import "bulma/bulma.sass";
 import "../styles/mystyles.scss";
 import "prism-themes/themes/prism-atom-dark.min.css";
+import "@fortawesome/free-brands-svg-icons";
+import "@fortawesome/free-solid-svg-icons";
+import "@fortawesome/fontawesome-svg-core";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 

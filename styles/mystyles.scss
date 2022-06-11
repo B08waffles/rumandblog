@@ -3,10 +3,13 @@
 //@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 @import "../node_modules/bulma/sass/utilities/initial-variables.sass";
 @import "../node_modules/bulma/sass/utilities/functions.sass";
+
+
 .bg-img{
-        background-image: url("../public/images/base.png");
+        background-image: url("../public/images/homepict.png");
         background-position: center center;
-				height:500px;
+				height:100%;
+				width: 100%;
         background-repeat:repeat;
         background-attachment:scroll;
         background-size:cover;
@@ -14,7 +17,11 @@
         background-color: #282a36;
 			}
 
-
+@media only screen and (max-width: 1180px){
+        .bg-img{
+                background-image: url("../public/images/homepictcrop.png");
+        }
+}
 // Set your brand colors
 $rippedfromdrac: #383a59;
 $background: #282a36;
@@ -48,6 +55,14 @@ $warning: $rippedfromdrac;
 $danger: $pink;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
+
+
+$total: 144;
+$time: 4;
+$height: 400;
+$percent: .69444%;
+$dotSize: .9;
+
 
 // Update some of Bulma's component variables
 $body-background-color: $background;
