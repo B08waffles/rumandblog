@@ -279,7 +279,7 @@ const Home: NextPage = () => {
                   <div className="content is-size-5-desktop is-size-6-touch">
                     Lucid Professor is a Brisbane based Rock {"&"} Blues four piece
                     band. In addition to being a founding member of the band and
-                    lead guitarist, I opted to make the band's website myself as
+                    lead guitarist, I opted to make the {"band's"} website myself as
                     well. We are currently refining our content into a studio
                     album. You can find our music at{" "}
                     <a href="https://lucidprofessor.com">
