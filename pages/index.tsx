@@ -50,7 +50,7 @@ const Home: NextPage = () => {
             </p>
             <Typewriter
               options={{
-                strings: ["Web Developer", "Musician", "Blogger"],
+                strings: ["Web Developer"],
                 autoStart: true,
                 loop: true,
                 wrapperClassName:
