@@ -11,7 +11,7 @@ export async function getStaticProps() {
   };
 }
 
-const BlogPage: NextPage = ({ allPostsData }) => {
+export default function BlogPage ({ allPostsData }) {
   return (
     <>
       <div className="container is-fluid">
@@ -53,4 +53,4 @@ const BlogPage: NextPage = ({ allPostsData }) => {
   );
 };
 
-export default BlogPage;
+
