@@ -6,8 +6,13 @@ export default function Header() {
   const toggleBurger = () => {
     let burgerIcon = document.getElementById("burger");
     let dropMenu = document.getElementById("navbarBasicExample");
+    if(burgerIcon && dropMenu) {
     burgerIcon.classList.toggle("is-active");
-    dropMenu.classList.toggle("is-active");
+    dropMenu.classList.toggle("is-active"); 
+    } else {
+      return;
+    }
+    
   };
   return (
     <nav

@@ -106,7 +106,7 @@ export default function WorkTogetherForm() {
         <>
           <div className="column has-text-centered "></div>
 
-          <progress class="progress is-large is-info" max="100">
+          <progress className="progress is-large is-info" max="100">
             60%
           </progress>
           <p className="has-text-info is-size-4-desktop is-size-5-tablet is-size-6-touch">
