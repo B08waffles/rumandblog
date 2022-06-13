@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 const ACCOUNT = process.env.EMAIL_ACCOUNT;
 const PASSWORD = process.env.EMAIL_PASSWORD;
 export default async function contact(req: any, res: any) {
-  const transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport("SMTP", {
     service: "hotmail",
     auth: {
       user: ACCOUNT,

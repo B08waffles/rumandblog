@@ -201,7 +201,7 @@ const Home: NextPage = () => {
                     the architectural framework and Bulma.css as the layout
                     framework {"I'm"} able to rapidly develop a simple Blog and
                     Portfolio site. Additional content and features such as
-                    comments and accounts are coming You can find the source
+                    comments and accounts are coming. You can find the source
                     code for this site at{" "}
                     <a href="https://github.com/b08waffles/rumandblog">
                       https://github.com/b08waffles/rumandblog
