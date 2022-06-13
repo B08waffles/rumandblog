@@ -221,6 +221,7 @@ export default function WorkTogetherForm() {
               <button
                 className="button is-success is-size-5-desktop is-size-6-touch"
                 type="submit"
+                id="button-2"
               >
                 <FontAwesomeIcon icon={faPaperPlane} /> Submit
               </button>

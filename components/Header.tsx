@@ -6,18 +6,17 @@ export default function Header() {
   const toggleBurger = () => {
     let burgerIcon = document.getElementById("burger");
     let dropMenu = document.getElementById("navbarBasicExample");
-    if(burgerIcon && dropMenu) {
-    burgerIcon.classList.toggle("is-active");
-    dropMenu.classList.toggle("is-active"); 
+    if (burgerIcon && dropMenu) {
+      burgerIcon.classList.toggle("is-active");
+      dropMenu.classList.toggle("is-active");
     } else {
       return;
     }
-    
   };
   return (
     <nav
       className="navbar has-background-warning"
-      role="navigationn"
+      role="navigation"
       aria-label="main navigation"
       style={{ boxShadow: "10px 10px 5px #23252f" }}
     >

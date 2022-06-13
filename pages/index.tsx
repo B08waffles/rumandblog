@@ -90,7 +90,6 @@ const Home: NextPage = () => {
       </section>
       <section
         className="section has-background-warning"
-        
         style={{ boxShadow: "10px 10px 5px #23252f" }}
       >
         <h1 className="title has-text-primary is-size-2-desktop is-size-3-tablet is-size-4-mobile has-text-centered">
@@ -102,16 +101,16 @@ const Home: NextPage = () => {
           <div className="column is-half has-text-justified has-text-light is-size-5-desktop is-size-6-touch">
             <p>
               {" "}
-              Hey, {"I'm"} Brandon! I first started tinkering with computers in the
-              glory days of Windows 95 and {"I've"} been addicted ever since!
-              Outside of my studies, {"I'm"} an avid reader, cyclist, musician and
-              Linux enthusiast.
+              Hey, {"I'm"} Brandon! I first started tinkering with computers in
+              the glory days of Windows 95 and {"I've"} been addicted ever
+              since! Outside of my studies, {"I'm"} an avid reader, cyclist,
+              musician and Linux enthusiast.
             </p>
             <br />
             <p>
               I recently completed my Diploma in Website Developent at
-              <a href="https://tafeqld.edu.au"> TAFE QLD</a>{"'s"} South Bank Campus
-              where I created the Capitalisation System
+              <a href="https://tafeqld.edu.au"> TAFE QLD</a>
+              {"'s"} South Bank Campus where I created the Capitalisation System
               <a href="https://starterupp.com"> STARTER UPP</a> as my final
               project. Now I work part-time as a full-stack web developer for
               <a href="https://powerlake.com"> https://powerlake.com</a> and as
@@ -239,7 +238,8 @@ const Home: NextPage = () => {
                   <div className="content is-size-5-desktop is-size-6-touch">
                     STARTER UPP is a capitalisation system. It allows users to
                     create companies, invite employees to join and create
-                    transactions with either {'"Money invested"'} or {'"Hours worked"'}
+                    transactions with either {'"Money invested"'} or{" "}
+                    {'"Hours worked"'}
                     in order to track employer/employee statistics. Data is
                     presented in variable charts, cards and tables. This was my
                     final project in completion of my Diploma of Website
@@ -277,11 +277,11 @@ const Home: NextPage = () => {
                     </a>{" "}
                   </p>
                   <div className="content is-size-5-desktop is-size-6-touch">
-                    Lucid Professor is a Brisbane based Rock {"&"} Blues four piece
-                    band. In addition to being a founding member of the band and
-                    lead guitarist, I opted to make the {"band's"} website myself as
-                    well. We are currently refining our content into a studio
-                    album. You can find our music at{" "}
+                    Lucid Professor is a Brisbane based Rock {"&"} Blues four
+                    piece band. In addition to being a founding member of the
+                    band and lead guitarist, I opted to make the {"band's"}{" "}
+                    website myself as well. We are currently refining our
+                    content into a studio album. You can find our music at{" "}
                     <a href="https://lucidprofessor.com">
                       https://lucidprofessor.com
                     </a>{" "}
@@ -407,9 +407,9 @@ const Home: NextPage = () => {
                   </h2>
                   <p className="content has-text-light is-size-5-desktop is-size-6-touch">
                     I am always open to new ideas, feedback and propositions so
-                    if you have something that {"you'd"} like to share then please
-                    use the contact form provided. If you would prefer to use
-                    your own email client, you can contact me at
+                    if you have something that {"you'd"} like to share then
+                    please use the contact form provided. If you would prefer to
+                    use your own email client, you can contact me at
                     b08waffles@protonmail.com.
                   </p>
                 </article>
