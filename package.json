@@ -7,7 +7,7 @@
     "build": "next build",
     "lint": "next lint",
     "start": "next start -p $PORT",
-     "heroku-postbuild": "npm install react-typography --force &&npm run build"
+     "heroku-postbuild": "npm install react-typography typewritter-effect --force && npm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -43,7 +43,7 @@
     "typeface-lato": "^1.1.13",
     "typeface-merriweather": "^1.1.13",
     "typeface-open-sans": "^1.1.13",
-    "typewriter-effect": "^2.18.2",
+
     "typography": "^0.16.21",
     "typography-theme-sutro": "^0.16.19",
     "unified": "^10.1.2"
