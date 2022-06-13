@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "devtime": "npm install react-typography typewriter-effect --force && next dev",
+    "prodtime": "npm uninstall react-typography typewriter-effect",
     "build": "next build",
     "lint": "next lint",
     "start": "next start -p $PORT",

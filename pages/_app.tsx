@@ -15,7 +15,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>B08waffles</title>
-        <meta name="description" content="Blog and portfolio site" />
+        <meta name="keywords" content="Brandon Kane, Brandon, Kane, Shay, Herrera, Web, Developer, Full-stack Web Developer, B08waffles, b08waffles, Brisbane, Lucid Professor, Starter Upp"></meta>
+        <meta name="description" content="Brandon's Blog and Portfolio" />
+        <meta name="author" content="Brandon Kane" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:image" content="/images/selfie.png" />
+        <link rel="shortcut icon" href="/images/selfie.png" />
       </Head>
       <Header />
       <div>
