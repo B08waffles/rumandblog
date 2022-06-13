@@ -4,8 +4,10 @@ import nodemailer from "nodemailer";
 const ACCOUNT = process.env.EMAIL_ACCOUNT;
 const PASSWORD = process.env.EMAIL_PASSWORD;
 export default async function contact(req: any, res: any) {
-  const transporter = nodemailer.createTransport("SMTP", {
-    service: "hotmail",
+  const transporter = nodemailer.createTransport({
+    host: "smtp.office365.com",
+    port: 587,
+    secure: false,
     auth: {
       user: ACCOUNT,
       pass: PASSWORD,
