@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         <div className="hero-body ">
           <div className="">
             <p className="title has-text-light is-size-1-desktop is-size-2-tablet is-size-3-mobile">
-              Hi, I'm Brandon.
+              Hi, {"I'm"} Brandon.
             </p>
             <Typewriter
               options={{
@@ -102,15 +102,15 @@ const Home: NextPage = () => {
           <div className="column is-half has-text-justified has-text-light is-size-5-desktop is-size-6-touch">
             <p>
               {" "}
-              Hey, I'm Brandon! I first started tinkering with computers in the
-              glory days of Windows 95 and I've been addicted ever since!
-              Outside of my studies, I'm an avid reader, cyclist, musician and
+              Hey, {"I'm"} Brandon! I first started tinkering with computers in the
+              glory days of Windows 95 and {"I've"} been addicted ever since!
+              Outside of my studies, {"I'm"} an avid reader, cyclist, musician and
               Linux enthusiast.
             </p>
             <br />
             <p>
               I recently completed my Diploma in Website Developent at
-              <a href="https://tafeqld.edu.au"> TAFE QLD</a>'s South Bank Campus
+              <a href="https://tafeqld.edu.au"> TAFE QLD</a>{"'s"} South Bank Campus
               where I created the Capitalisation System
               <a href="https://starterupp.com"> STARTER UPP</a> as my final
               project. Now I work part-time as a full-stack web developer for
@@ -163,7 +163,7 @@ const Home: NextPage = () => {
                   </p>
                   <div className="content is-size-5-desktop is-size-6-touch">
                     Powerlake is an energy saving tool that allows users to
-                    automate their electrical appliances' operation times,
+                    automate their electrical applianc{"es'"} operation times,
                     according to current and predicted electricity prices, and
                     renewables preference, potentially saving on electrical
                     bills and usage. The idea is to switch devices on when
@@ -199,7 +199,7 @@ const Home: NextPage = () => {
                   <div className="content is-size-5-desktop is-size-6-touch">
                     This site is an ongoing project of mine. Using Next.js as
                     the architectural framework and Bulma.css as the layout
-                    framework I'm able to rapidly develop a simple Blog and
+                    framework {"I'm"} able to rapidly develop a simple Blog and
                     Portfolio site. Additional content and features such as
                     comments and accounts are coming You can find the source
                     code for this site at{" "}
@@ -239,7 +239,7 @@ const Home: NextPage = () => {
                   <div className="content is-size-5-desktop is-size-6-touch">
                     STARTER UPP is a capitalisation system. It allows users to
                     create companies, invite employees to join and create
-                    transactions with either "Money invested" or "Hours worked"
+                    transactions with either {'"Money invested"'} or {'"Hours worked"'}
                     in order to track employer/employee statistics. Data is
                     presented in variable charts, cards and tables. This was my
                     final project in completion of my Diploma of Website
@@ -277,7 +277,7 @@ const Home: NextPage = () => {
                     </a>{" "}
                   </p>
                   <div className="content is-size-5-desktop is-size-6-touch">
-                    Lucid Professor is a Brisbane based Rock & Blues four piece
+                    Lucid Professor is a Brisbane based Rock {"&"} Blues four piece
                     band. In addition to being a founding member of the band and
                     lead guitarist, I opted to make the band's website myself as
                     well. We are currently refining our content into a studio
@@ -407,7 +407,7 @@ const Home: NextPage = () => {
                   </h2>
                   <p className="content has-text-light is-size-5-desktop is-size-6-touch">
                     I am always open to new ideas, feedback and propositions so
-                    if you have something that you'd like to share then please
+                    if you have something that {"you'd"} like to share then please
                     use the contact form provided. If you would prefer to use
                     your own email client, you can contact me at
                     b08waffles@protonmail.com.

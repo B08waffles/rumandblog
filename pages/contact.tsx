@@ -22,7 +22,7 @@ export default function Contact() {
                     {" "}
                     b08waffles@protonmail.com
                   </a>
-                  . You can send either plain text or HTML via the "Message" box
+                  . You can send either plain text or HTML via the {"Message"} box
                   provided here.
                   <br />
                   <br />
