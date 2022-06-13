@@ -41,7 +41,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Home | B08waffles</title>
       </Head>
-      <section className="hero is-success is-fullheight-with-navbar has-background-grey-darker bg-img">
+      <section className="hero is-success is-fullheight has-background-grey-darker bg-img">
         {" "}
         <div className="hero-body ">
           <div className="">
@@ -90,7 +90,7 @@ const Home: NextPage = () => {
       </section>
       <section
         className="section has-background-warning"
-        style={{ boxShadow: "10px 10px 5px #23252f" }}
+        style={{ boxShadow: "10px 10px 5px #23252f !important" }}
       >
         <h1 className="title has-text-primary is-size-2-desktop is-size-3-tablet is-size-4-mobile has-text-centered">
           The Essentials
@@ -127,8 +127,9 @@ const Home: NextPage = () => {
       <section
         className="section has-background-grey-darker"
         style={{ boxShadow: "10px 10px 5px #23252f" }}
+        id="kylegas"
       >
-        <h1 className="title has-text-success is-size-2-desktop is-size-3-tablet has-text-centered">
+        <h1 className="title has-text-success is-size-2-desktop is-size-3-tablet has-text-centered ">
           Projects
         </h1>
         <br />
@@ -379,7 +380,7 @@ const Home: NextPage = () => {
       </section>
       <section
         className="section is-small has-background-grey-darker"
-        id="hireme"
+        id="jackblack"
       >
         <h1 className="title has-text-light is-size-2-desktop is-size-3-tablet is-size-4-touch has-text-centered">
           Lets Work Together!{" "}

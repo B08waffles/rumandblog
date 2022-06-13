@@ -36,6 +36,9 @@ export default function Post({ postData }) {
     <>
       <div className="container is-fluid">
         <section className="section is-small has-text-white">
+          <br />
+          <div className="level" />
+          <br />
           <div className="columns">
             <div className="column"></div>
             <div className="column is-two-thirds">

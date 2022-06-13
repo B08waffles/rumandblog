@@ -15,7 +15,7 @@ export default function Header() {
   };
   return (
     <nav
-      className="navbar has-background-warning"
+      className="navbar has-background-warning is-fixed-top glow-on-hover"
       role="navigation"
       aria-label="main navigation"
       style={{ boxShadow: "10px 10px 5px #23252f" }}

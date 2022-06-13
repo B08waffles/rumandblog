@@ -6,6 +6,7 @@ import {
   faPaperPlane,
   faPlane,
   faRobot,
+  faThumbsUp,
   faUser,
   faWandMagicSparkles,
 } from "@fortawesome/free-solid-svg-icons";
@@ -223,6 +224,9 @@ export default function WorkTogetherForm() {
                 type="submit"
                 id="button-2"
               >
+                <div id="slide">
+                  <FontAwesomeIcon icon={faThumbsUp} />
+                </div>
                 <FontAwesomeIcon icon={faPaperPlane} /> Submit
               </button>
             </div>

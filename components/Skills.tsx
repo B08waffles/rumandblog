@@ -10,21 +10,24 @@ export default function Skills({
 }) {
   return (
     <div className="tile is-ancestor ">
+      {" "}
       <div className="tile is-parent is-vertical">
+        {" "}
         <div
-          className="tile is-child box has-background-info"
+          className="tile is-child box has-background-info glow-on-hover"
           style={{ boxShadow: "10px 10px 5px #23252f" }}
         >
+          {" "}
           <p className="subtitle has-text-white has-text-centered has-text-weight-semibold is-size-4-desktop is-size-5-tablet is-size-6-touch">
             <a className="has-text-white" href={ref1}>
               {data1}
-            </a>
+            </a>{" "}
           </p>
         </div>
       </div>
       <div className="tile is-parent is-vertical">
         <div
-          className="tile is-child box has-background-info"
+          className="tile is-child box has-background-info glow-on-hover"
           style={{ boxShadow: "10px 10px 5px #23252f" }}
         >
           <p className="subtitle has-text-white has-text-centered has-text-weight-semibold is-size-4-desktop is-size-5-tablet is-size-6-touch">
@@ -36,7 +39,7 @@ export default function Skills({
       </div>
       <div className="tile is-parent is-vertical">
         <div
-          className="tile is-child box has-background-info"
+          className="tile is-child box has-background-info glow-on-hover"
           style={{ boxShadow: "10px 10px 5px #23252f" }}
         >
           <p className="subtitle has-text-white has-text-centered has-text-weight-semibold is-size-4-desktop is-size-5-tablet is-size-6-touch">
@@ -48,7 +51,7 @@ export default function Skills({
       </div>
       <div className="tile is-parent is-vertical">
         <div
-          className="tile is-child box has-background-info"
+          className="tile is-child box has-background-info glow-on-hover"
           style={{ boxShadow: "10px 10px 5px #23252f" }}
         >
           <p className="subtitle has-text-white has-text-centered has-text-weight-semibold is-size-4-desktop is-size-5-tablet is-size-6-touch">

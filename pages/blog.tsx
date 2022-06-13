@@ -11,7 +11,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function BlogPage ({ allPostsData }) {
+export default function BlogPage({ allPostsData }) {
   return (
     <>
       <div className="container is-fluid">
@@ -20,9 +20,14 @@ export default function BlogPage ({ allPostsData }) {
           <div className="level"></div>
           <br />
           <div className="level"></div>
+          <br /> <br />
+          <div className="level" />
           <br />
           <div className="column"></div>
           <div className="column is-half">
+            <br />
+            <br />
+            <div className="level" />
             <br />
             <h1 className="title has-text-primary">Blogs</h1>
             {allPostsData.map(({ id, title, date, description }) => (
@@ -51,6 +56,4 @@ export default function BlogPage ({ allPostsData }) {
       </div>
     </>
   );
-};
-
-
+}

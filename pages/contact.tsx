@@ -5,6 +5,8 @@ export default function Contact() {
     <>
       <div className="container is-fluid">
         <br />
+        <div className="level" />
+        <br />
         <h1 className="title has-text-centered  has-text-primary is-size-2-desktop is-size-3-touch">
           Contact
         </h1>
@@ -22,8 +24,10 @@ export default function Contact() {
                     {" "}
                     b08waffles@protonmail.com
                   </a>
-                  . You can send either plain text or HTML via the {"Message"} box
-                  provided here.
+                  . You can send either plain text or HTML via the {
+                    "Message"
+                  }{" "}
+                  box provided here.
                   <br />
                   <br />
                   I usually check my inbox a few times a day and am usually
