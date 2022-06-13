@@ -26,16 +26,16 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const allPostsData = getSortedPostsData();
+//   return {
+//     props: {
+//       allPostsData,
+//     },
+//   };
+// }
 
-const Home: NextPage = ({ allPostsData }) => {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
