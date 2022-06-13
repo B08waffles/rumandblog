@@ -90,7 +90,7 @@ const Home: NextPage = ({ allPostsData }) => {
       </section>
       <section
         className="section has-background-warning"
-        id
+        
         style={{ boxShadow: "10px 10px 5px #23252f" }}
       >
         <h1 className="title has-text-primary is-size-2-desktop is-size-3-tablet is-size-4-mobile has-text-centered">
