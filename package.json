@@ -43,6 +43,7 @@
     "typeface-lato": "^1.1.13",
     "typeface-merriweather": "^1.1.13",
     "typeface-open-sans": "^1.1.13",
+    "typescript": "^4.7.3",
     "typography": "^0.16.21",
     "typography-theme-sutro": "^0.16.19",
     "unified": "^10.1.2"
@@ -53,7 +54,6 @@
     "@types/react": "18.0.12",
     "@types/react-dom": "18.0.5",
     "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6",
-    "typescript": "^4.7.3"
+    "eslint-config-next": "12.1.6"
   }
 }
