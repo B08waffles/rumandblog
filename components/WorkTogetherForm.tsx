@@ -1,4 +1,14 @@
 import { ChangeEvent, useState } from "react";
+import { toast as superToast } from "bulma-toast";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPaperPlane,
+  faPlane,
+  faRobot,
+  faUser,
+  faWandMagicSparkles,
+} from "@fortawesome/free-solid-svg-icons";
 export default function WorkTogetherForm() {
   const [text, setText] = useState("");
   const [email, setEmail] = useState("");
@@ -39,46 +49,56 @@ export default function WorkTogetherForm() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if (botCheck === 0) {
-      document.getElementById("botChecker").innerHTML += " No bots allowed!";
-      return;
-    } else {
-      setIsLoading(true);
-      let data = JSON.stringify({
-        email: email,
-        name: name,
-        subject: subject,
-        text: email + " says " + text,
-        html: `<div>${email}${subject}${text}</div>`,
-      });
-      fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-        body: data,
-      }).then((res) => {
-        console.log("Response received");
-        if (res.status === 200) {
-          console.log("Response succeeded!");
-          setSubmitted(true);
-          setName("");
-          setEmail("");
-          setText("");
-          setSubject("");
-          setIsLoading(false);
-        } else if (res.status === 404) {
-          console.log("Something went wrong");
-          setIsLoading(false);
-          alert("Sorry, something went wrong");
-          return;
-        } else {
-          alert("There is something fishy in the air...");
-          return;
-        }
-      });
-    }
+    //    if (botCheck === 0) {
+    //      document.getElementById("botChecker").innerHTML += " No bots allowed!";
+    //      return;
+    //    } else {
+    setIsLoading(true);
+    let data = JSON.stringify({
+      email: email,
+      name: name,
+      subject: subject,
+      text: email + " says " + text,
+      html: `<div>${email}${subject}${text}</div>`,
+    });
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: data,
+    }).then((res) => {
+      console.log("Response received");
+      if (res.status === 200) {
+        console.log("Response succeeded!");
+        setSubmitted(true);
+        setName("");
+        setEmail("");
+        setText("");
+        setSubject("");
+        setIsLoading(false);
+        return superToast({
+          message:
+            "You're email was sent successfully, you should get a response back within 24 - 48 hours. Thank you.",
+          type: "is-primary",
+          position: "center",
+          closeOnClick: true,
+          pauseOnHover: true,
+
+          duration: 5000,
+        });
+      } else if (res.status === 500) {
+        console.log("Something went wrong");
+        setIsLoading(false);
+        alert("Sorry, something went wrong");
+        return;
+      } else {
+        alert("There is something fishy in the air...");
+        return;
+      }
+    });
+    //    }
   };
   return (
     <>
@@ -98,9 +118,9 @@ export default function WorkTogetherForm() {
         <form onSubmit={sendEmail}>
           <div className="field has-text-white">
             <label className="label has-text-white is-info is-size-4-desktop is-size-5-touch">
-              Name
+              <FontAwesomeIcon icon={faWandMagicSparkles} /> Name
             </label>
-            <div className="control has-background-grey-darker has-text-white">
+            <div className="control has-icons-left has-background-grey-darker has-text-white">
               <input
                 className="input has-background-dark has-text-white"
                 type="text"
@@ -110,27 +130,29 @@ export default function WorkTogetherForm() {
                 placeholder="What's your name?"
                 value={name}
                 onChange={onChangeName}
+                pattern="[a-zA-Z]{2,100}"
               />
+              <span className="icon is-small has-text-white is-left">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
             </div>
           </div>
 
-          <div className="field">
+          <div className="field has-text-white">
             <label className="label has-text-white is-size-4-desktop is-size-5-touch">
               Email
             </label>
-            <div className="control has-icons-left has-icons-right">
+            <div className="control has-icons-left has-icons-right has-text-white">
               <input
                 className="input has-background-dark has-text-white"
                 type="email"
                 placeholder="Email input"
                 value={email}
                 onChange={onChangeEmail}
+                required
               />
-              <span className="icon is-small is-left">
-                <i className="fas fa-envelope"></i>
-              </span>
-              <span className="icon is-small is-right">
-                <i className="fas fa-exclamation-triangle"></i>
+              <span className="icon is-small has-text-white is-left">
+                <FontAwesomeIcon icon={faEnvelope} />
               </span>
             </div>
           </div>
@@ -145,14 +167,15 @@ export default function WorkTogetherForm() {
                   className="has-background-dark has-text-white is-size-5-desktop is-size-6-touch"
                   value={subject}
                   onChange={onChangeSubject}
+                  required
                 >
-                  <option className="has-background-dark ">
-                    Select dropdown
-                  </option>
+                  <option className="has-background-dark ">General</option>
                   <option className="has-background-dark">
                     Request for quote
                   </option>
-                  <option className="has-background-dark">General</option>
+                  <option className="has-background-dark">
+                    Report an issue
+                  </option>
                   <option className="has-background-dark">
                     Personal message
                   </option>
@@ -170,7 +193,8 @@ export default function WorkTogetherForm() {
                 className="textarea has-background-dark has-text-white"
                 value={text}
                 onChange={onChangeTextBody}
-                placeholder="Textarea"
+                placeholder="What would you like to share?"
+                required
               ></textarea>
             </div>
           </div>
@@ -185,8 +209,9 @@ export default function WorkTogetherForm() {
                   type="checkbox"
                   value={botCheck}
                   onChange={onChangeBot}
+                  required
                 />{" "}
-                I am not a bot{" "}
+                I am not a bot <FontAwesomeIcon icon={faRobot} />
               </label>
             </div>
           </div>
@@ -197,7 +222,7 @@ export default function WorkTogetherForm() {
                 className="button is-success is-size-5-desktop is-size-6-touch"
                 type="submit"
               >
-                Submit
+                <FontAwesomeIcon icon={faPaperPlane} /> Submit
               </button>
             </div>
           </div>

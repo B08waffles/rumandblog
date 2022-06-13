@@ -75,6 +75,11 @@ a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within,
         !important;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $white !important;
+  opacity: 1 !important; /* Firefox */
+}
+
 a:hover {
         color: $primary !important;
 }
@@ -157,3 +162,4 @@ color: $white;
 //@import "../node_modules/bulma/sass/components/navbar.sass";
 //@import "../node_modules/bulma/sass/layout/hero.sass";
 //@import "../node_modules/bulma/sass/layout/section.sass";			
+

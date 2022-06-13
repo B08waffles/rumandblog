@@ -11,12 +11,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faB,
   faEnvelope,
+  faFilePdf,
   faMailBulk,
   faMailForward,
   faMailReply,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
+  faGitlab,
   faInstagram,
   faLinkedinIn,
   faMastodon,
@@ -59,33 +61,28 @@ const Home: NextPage = ({ allPostsData }) => {
             />
           </div>
         </div>{" "}
-        <div className="hero-foot is-size-1-desktop has-text-white">
+        <div className="hero-foot is-size-1-desktop is-size-2-touch has-text-white">
           {"   "}{" "}
-          <a href="https://github/b08waffles">
+          <a href="https://github.com/B08waffles">
             {"   "}
             <FontAwesomeIcon icon={faGithub} />{" "}
           </a>
-          <a href="https://starterupp.com">
+          <a href="https://www.linkedin.com/in/bkane95">
             {" "}
             <FontAwesomeIcon icon={faLinkedinIn} />{" "}
+          </a>{" "}
+          <a href="/Resume.pdf">
+            {" "}
+            <FontAwesomeIcon icon={faFilePdf} />{" "}
           </a>{" "}
           <a href="mailto:b08waffles@protonmail.com">
             {" "}
             <FontAwesomeIcon icon={faEnvelope} />{" "}
           </a>
-          <a href="https://starterupp.com">
-            {" "}
-            <FontAwesomeIcon icon={faInstagram} />{" "}
+          <a href="https://gitlab.com/b08waffles">
+            <FontAwesomeIcon icon={faGitlab} />
           </a>
-          <a href="https://starterupp.com">
-            {" "}
-            <FontAwesomeIcon icon={faSoundcloud} />{" "}
-          </a>{" "}
-          <a href="https://starterupp.com">
-            {" "}
-            <FontAwesomeIcon icon={faMastodon} />{" "}
-          </a>
-          <a href="mailto:b08waffles@protonmail.com">
+          <a href="https://twitter.com/b08waffles">
             {" "}
             <FontAwesomeIcon icon={faTwitter} />{" "}
           </a>
@@ -93,6 +90,7 @@ const Home: NextPage = ({ allPostsData }) => {
       </section>
       <section
         className="section has-background-warning"
+        id
         style={{ boxShadow: "10px 10px 5px #23252f" }}
       >
         <h1 className="title has-text-primary is-size-2-desktop is-size-3-tablet is-size-4-mobile has-text-centered">
@@ -101,7 +99,7 @@ const Home: NextPage = ({ allPostsData }) => {
         <br />
         <div className="columns">
           <div className="column"></div>
-          <div className="column is-half has-text-justified has-text-light is-size-5-desktop is-size-6-tablet is-size-7-touch">
+          <div className="column is-half has-text-justified has-text-light is-size-5-desktop is-size-6-touch">
             <p>
               {" "}
               Hey, I'm Brandon! I first started tinkering with computers in the
@@ -135,11 +133,13 @@ const Home: NextPage = ({ allPostsData }) => {
           Projects
         </h1>
         <br />
-        <div
-          className="card has-background-warning has-text-light"
-          style={{ boxShadow: "10px 10px 5px #23252f" }}
-        >
-          {/* <div className="card-content">
+        <div className="columns">
+          <div className="column is-half">
+            <div
+              className="card has-background-warning has-text-light"
+              style={{ boxShadow: "10px 10px 5px #23252f" }}
+            >
+              {/* <div className="card-content">
             <div className="media">
               <div className="media-left">
                 <figure className="image">
@@ -153,117 +153,157 @@ const Home: NextPage = ({ allPostsData }) => {
               </div>
             </div>
           </div>*/}
-          <div className="card-content">
-            <div className="media-content">
-              <p className="title is-size-3-desktop is-size-4-tablet is-size-5-touch has-text-white">
-                Powerlake
-              </p>
-              <p className="subtitle is-size-5-desktop is-size-6-tablet is-size-7-touch">
-                <a href="https://powerlake.com">https://powerlake.com</a>{" "}
-              </p>
-              <div className="content is-size-5-desktop is-size-6-tablet is-size-7-touch">
-                Powerlake is an energy saving tool that allows users to automate
-                their electrical appliances' operation times, according to
-                current and predicted electricity prices, and renewables
-                preference, potentially saving on electrical bills and usage.
-                The idea is to switch devices on when needed and match it to
-                when electricity is at its cheapest.
-              </div>
-              <div className="field is-grouped is-grouped-multiline">
-                <Tags tag="Flask" />
-                <Tags tag="React" />
-                <Tags tag="Python" />
-                <Tags tag="JavaScript" />
-                <Tags tag="Webpack" />
-                <Tags tag="Gunicorn" />
-                <Tags tag="CSS3" />
-                <Tags tag="Bootstrap" />
+              <div className="card-content">
+                <div className="media-content">
+                  <p className="title is-size-3-desktop is-size-4-tablet is-size-5-touch has-text-white">
+                    Powerlake
+                  </p>
+                  <p className="subtitle is-size-5-desktop is-size-6-touch">
+                    <a href="https://powerlake.com">https://powerlake.com</a>{" "}
+                  </p>
+                  <div className="content is-size-5-desktop is-size-6-touch">
+                    Powerlake is an energy saving tool that allows users to
+                    automate their electrical appliances' operation times,
+                    according to current and predicted electricity prices, and
+                    renewables preference, potentially saving on electrical
+                    bills and usage. The idea is to switch devices on when
+                    needed and match it to when electricity is at its cheapest.
+                  </div>
+                  <div className="field is-grouped is-grouped-multiline">
+                    <Tags tag="Flask" />
+                    <Tags tag="React" />
+                    <Tags tag="Python" />
+                    <Tags tag="JavaScript" />
+                    <Tags tag="Webpack" />
+                    <Tags tag="Gunicorn" />
+                    <Tags tag="CSS3" />
+                    <Tags tag="Bootstrap" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div className="column is-half">
+            <div
+              className="card has-background-warning has-text-light"
+              style={{ boxShadow: "10px 10px 5px #23252f" }}
+            >
+              <div className="card-content">
+                <div className="media-content">
+                  <p className="title is-size-3-desktop is-size-4-tablet is-size-5-mobile has-text-white">
+                    B08waffles
+                  </p>
+                  <p className="subtitle is-size-5-desktop is-size-6-touch">
+                    <a href="https://b08waffles.com">https://b08waffles.com</a>{" "}
+                  </p>
+                  <div className="content is-size-5-desktop is-size-6-touch">
+                    This site is an ongoing project of mine. Using Next.js as
+                    the architectural framework and Bulma.css as the layout
+                    framework I'm able to rapidly develop a simple Blog and
+                    Portfolio site. Additional content and features such as
+                    comments and accounts are coming You can find the source
+                    code for this site at{" "}
+                    <a href="https://github.com/b08waffles/rumandblog">
+                      https://github.com/b08waffles/rumandblog
+                    </a>
+                    .
+                  </div>
+                  <div className="field is-grouped is-grouped-multiline">
+                    <Tags tag="Next.js" />
+                    <Tags tag="TypeScript" />
+                    <Tags tag="React" />
+                    <Tags tag="SCSS" />
+                    <Tags tag="Bulma.css" />
+                    <Tags tag="Nodemailer" />
+                    <Tags tag="HTML5" />
+                  </div>
+                </div>
+              </div>
+            </div>{" "}
+          </div>{" "}
         </div>
-        <br />
-        <div
-          className="card has-background-warning has-text-light"
-          style={{ boxShadow: "10px 10px 5px #23252f" }}
-        >
-          <div className="card-content">
-            <div className="media-content">
-              <p className="title is-size-3-desktop is-size-4-tablet is-size-5-mobile has-text-white">
-                STARTER UPP
-              </p>
-              <p className="subtitle is-size-5-desktop is-size-6-tablet is-size-7-touch">
-                <a href="https://starterupp.com">https://starterupp.com</a>{" "}
-              </p>
-              <div className="content is-size-5-desktop is-size-6-tablet is-size-7-touch">
-                STARTER UPP is a capitalisation system. It allows users to
-                create companies, invite employees to join and create
-                transactions with either "Money invested" or "Hours worked" in
-                order to track employer/employee statistics. Data is presented
-                in variable charts, cards and tables. This was my final project
-                in completion of my Diploma of Website Development.
-              </div>
-              <div className="field is-grouped is-grouped-multiline">
-                <Tags tag="Django" />
-                <Tags tag="Python" />
-                <Tags tag="Django Rest Framework" />
-                <Tags tag="React" />
-                <Tags tag="SCSS" />
-                <Tags tag="TypeScript" />
-                <Tags tag="Parcel" />
-                <Tags tag="Bootstrap" />
-                <Tags tag="Workbox" />
-                <Tags tag="Gunicorn" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div
-          className="card has-background-warning has-text-light"
-          style={{ boxShadow: "10px 10px 5px #23252f" }}
-        >
-          <div className="card-content">
-            <div className="media-content">
-              <p className="title is-3 has-text-white">Lucid Professor</p>
-              <p className="subtitle is-size-5-desktop is-size-6-tablet is-size-7-touch">
-                <a href="https://lucidprofessor.com">
-                  https://lucidprofessor.com
-                </a>{" "}
-              </p>
-              <div className="content is-size-5-desktop is-size-6-tablet is-size-7-touch">
-                Lucid Professor is a brisbane based Psychedelic Rock & Blues
-                band. In addition to being a founding member of the band, I made
-                the band's website as well. We are always keen for more gigs.
-                You can find our music at{" "}
-                <a href="https://lucidprofessor.com">
-                  https://lucidprofessor.com
-                </a>{" "}
-                and
-                <a href="https://soundcloud.com/lucidprofessor">
-                  {" "}
-                  https://soundcloud.com/lucidprofessor
-                </a>
-                .
-              </div>
-              <div className="field is-grouped is-grouped-multiline">
-                <Tags tag="WordPress" />
-                <Tags tag="CSS3" />
-                <Tags tag="C" />
-                <Tags tag="C#" />
-                <Tags tag="D" />
-                <Tags tag="D#" />
-                <Tags tag="E" />
-                <Tags tag="F" />
-                <Tags tag="F#" />
-                <Tags tag="G" />
-                <Tags tag="G#" />
-                <Tags tag="A" />
-                <Tags tag="A#" />
-                <Tags tag="B" />
+        <div className="columns">
+          <div className="column">
+            <div
+              className="card has-background-warning has-text-light"
+              style={{ boxShadow: "10px 10px 5px #23252f" }}
+            >
+              <div className="card-content">
+                <div className="media-content">
+                  <p className="title is-size-3-desktop is-size-4-tablet is-size-5-mobile has-text-white">
+                    STARTER UPP
+                  </p>
+                  <p className="subtitle is-size-5-desktop is-size-6-touch">
+                    <a href="https://starterupp.com">https://starterupp.com</a>{" "}
+                  </p>
+                  <div className="content is-size-5-desktop is-size-6-touch">
+                    STARTER UPP is a capitalisation system. It allows users to
+                    create companies, invite employees to join and create
+                    transactions with either "Money invested" or "Hours worked"
+                    in order to track employer/employee statistics. Data is
+                    presented in variable charts, cards and tables. This was my
+                    final project in completion of my Diploma of Website
+                    Development.
+                  </div>
+                  <div className="field is-grouped is-grouped-multiline">
+                    <Tags tag="Django" />
+                    <Tags tag="Python" />
+                    <Tags tag="Django Rest Framework" />
+                    <Tags tag="React" />
+                    <Tags tag="SCSS" />
+                    <Tags tag="TypeScript" />
+                    <Tags tag="Parcel" />
+                    <Tags tag="Bootstrap" />
+                    <Tags tag="Workbox" />
+                    <Tags tag="Gunicorn" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div className="column">
+            <div
+              className="card has-background-warning has-text-light"
+              style={{ boxShadow: "10px 10px 5px #23252f" }}
+            >
+              <div className="card-content">
+                <div className="media-content">
+                  <p className="title is-size-3-desktop is-size-4-touch has-text-white">
+                    Lucid Professor
+                  </p>
+                  <p className="subtitle is-size-5-desktop is-size-6-touch">
+                    <a href="https://lucidprofessor.com">
+                      https://lucidprofessor.com
+                    </a>{" "}
+                  </p>
+                  <div className="content is-size-5-desktop is-size-6-touch">
+                    Lucid Professor is a Brisbane based Rock & Blues four piece
+                    band. In addition to being a founding member of the band and
+                    lead guitarist, I opted to make the band's website myself as
+                    well. We are currently refining our content into a studio
+                    album. You can find our music at{" "}
+                    <a href="https://lucidprofessor.com">
+                      https://lucidprofessor.com
+                    </a>{" "}
+                    and
+                    <a href="https://soundcloud.com/lucidprofessor">
+                      {" "}
+                      https://soundcloud.com/lucidprofessor
+                    </a>
+                    .
+                  </div>
+                  <div className="field is-grouped is-grouped-multiline">
+                    <Tags tag="WordPress" />
+                    <Tags tag="CSS3" />
+                    <Tags tag="HTML5" />
+                    <Tags tag="siteground.com" />
+                    <Tags tag="Cpanel" />
+                    <Tags tag="PhpMyAdmin" /> <Tags tag="Apache" />
+                  </div>
+                </div>
+              </div>
+            </div>{" "}
+          </div>{" "}
         </div>
       </section>
       <section

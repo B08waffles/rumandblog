@@ -1,9 +1,9 @@
 require("dotenv").config;
+import nodemailer from "nodemailer";
 
 const ACCOUNT = process.env.EMAIL_ACCOUNT;
 const PASSWORD = process.env.EMAIL_PASSWORD;
-export default function contact(req, res) {
-  let nodemailer = require("nodemailer");
+export default async function contact(req: any, res: any, err: any, info: any) {
   const transporter = nodemailer.createTransport({
     service: "hotmail",
     auth: {
@@ -12,24 +12,16 @@ export default function contact(req, res) {
     },
   });
 
-  const mailData = {
-    from: ACCOUNT,
-    to: "b08waffles@protonmail.com",
-    subject: `${req.body.subject} From ${req.body.name}`,
-    text: req.body.text,
-    html: req.body.text,
-  };
-
-  transporter.sendMail(mailData, function Sender(err, info) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(info);
-      if ((info.rejected = [])) {
-        return res.status(200);
-      } else {
-        return res.status(404);
-      }
-    }
-  });
+  try {
+    await transporter.sendMail({
+      from: ACCOUNT,
+      to: "b08waffles@protonmail.com",
+      subject: `${req.body.subject} From ${req.body.name}`,
+      text: req.body.text,
+      html: req.body.text,
+    });
+  } catch (err) {
+    return res.status(500).json({ err: err.message || err.toString() });
+  }
+  return res.status(200).json({ err: "" });
 }
