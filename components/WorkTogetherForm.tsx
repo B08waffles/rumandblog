@@ -130,7 +130,7 @@ export default function WorkTogetherForm() {
                 placeholder="What's your name?"
                 value={name}
                 onChange={onChangeName}
-                pattern="[a-zA-Z]{2,100}"
+                pattern="/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u"
               />
               <span className="icon is-small has-text-white is-left">
                 <FontAwesomeIcon icon={faUser} />
