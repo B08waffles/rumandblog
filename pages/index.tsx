@@ -194,7 +194,7 @@ const Home: NextPage = () => {
                     B08waffles
                   </p>
                   <p className="subtitle is-size-5-desktop is-size-6-touch">
-                    <a href="https://b08waffles.herokuapp.com/">https://b08waffles.herokuapp.com/</a>{" "}
+                    <a href="https://b08waffles.herokuapp.com">https://b08waffles.herokuapp.com</a>{" "}
                   </p>
                   <div className="content is-size-5-desktop is-size-6-touch">
                     This site is an ongoing project of mine. Using Next.js as
