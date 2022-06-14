@@ -108,7 +108,7 @@ const Home: NextPage = () => {
             </p>
             <br />
             <p>
-              I recently completed my Diploma in Website Developent at
+              I recently completed my Diploma in Website Development at
               <a href="https://tafeqld.edu.au"> TAFE QLD</a>
               {"'s"} South Bank Campus where I created the Capitalisation System
               <a href="https://starterupp.com"> STARTER UPP</a> as my final
